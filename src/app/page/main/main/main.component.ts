@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    /* console.log('Constructor');
+    window.document.getElementById('main').addEventListener('scroll', function(event){
+      console.log('EventScroll: ', event);
+    }); */
+  }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,47 @@
+<div class="limiter animated fadeInRight">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <button class="btn btn-outline-primary col-12" [routerLink]="['/main']" routerLinkActive="router-link-active">Ir al principal</button>
+            <form (ngSubmit)="onSubmit()" class="login100-form validate-form flex-sb flex-w" [formGroup]="form">
+                <span class="login100-form-title p-b-51">
+                        Crear nueva cuenta
+                    </span>
+
+                <span *ngIf="form.get('email').invalid && (form.get('email').dirty || form.get('email').touched)" class="text-danger animated fadeIn">
+                        El correo es obligatorio
+                    </span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="email" matInput formControlName="email" required placeholder="Email">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="form.get('name').invalid && (form.get('name').dirty || form.get('name').touched)" class="text-danger animated fadeIn">El nombre es obligatorio</span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="text" matInput formControlName="name" minlength="5" required placeholder="Nombre y apellidos">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="form.get('password').invalid && (form.get('password').dirty || form.get('password').touched)" class="text-danger animated fadeIn">Al menos 6 letras</span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="password" matInput formControlName="password" minlength="6" required placeholder="Password">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div>
+                        <a routerLink="/login" class="txt1">
+                            ¿Ya tienes cuenta? / Ingresar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Crear cuenta
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="limiter animated fadeInLeft">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <button class="btn btn-outline-primary col-12" [routerLink]="['/main']" routerLinkActive="router-link-active">Ir al principal</button>
+            <form [formGroup]="form" #f (ngSubmit)="login()" class="login100-form validate-form flex-sb flex-w">
+                <span class="login100-form-title p-b-51">
+                    Login
+                </span>
+                <span *ngIf="form.get('email').invalid && (form.dirty || form.touched)" class="text-danger">
+                    El correo es obligatorio
+                </span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="text" matInput formControlName="email" required placeholder="Email">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <span *ngIf="form.get('password').invalid && (form.dirty || form.touched)" class="text-danger">          
+                    Contraseña es obligatoria
+                </span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="password" matInput formControlName="password" required minlength="6" placeholder="Password">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div>
+                        <a routerLink="/signup" class="txt1">
+                            ¿No tienes cuenta?
+                        </a>
+                    </div>
+                </div>
+
+                <button class="container-login100-form-btn m-t-17 login100-form-btn" [disabled]="form.invalid" type="submit">
+                    Ingresar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
