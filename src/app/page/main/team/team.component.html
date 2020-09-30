@@ -7,28 +7,28 @@
 <section class="bimg2 text-center pt-5" id="equipo">
     <div class="container p-4 ">
         <h1 class="text-black">SpaceThonHN equipo rojo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, explicabo.</p>
+        <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, explicabo.</p>
         <div class="row">
-           <div class="col-lg-3 teams "  data-aos="fade-up"
+           <div *ngFor ="let persona of estudiantes" class="col-lg-3 teams "  data-aos="fade-up"
                                         data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
+               <div class="card text-dark mb-5" style="background: rgba(64, 115, 158, .35);">
                    <div class="card-body">
-                       <img src="../../../../assets/mujer1.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">GABRIELA MUNOZ</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
+                       <img src="../../../../assets/{{persona.img}}" class="img-fluid rounded" alt="Person One" style="width: 190px; height: 220px;">
+                       <h3 class="mt-3">{{persona.name}}</h3>
+                       <p>{{persona.descrip}}</p>
                        <div class="d-flex flex-row justify-content-center">
                            <div class="p-4">
-                               <a href="" target="blank">
+                               <a href={{persona.facebook}} target="blank">
                                    <i class="fab fa-facebook"></i>
                                </a>
                            </div>
                            <div class="p-4">
-                               <a href="" target="blank">
+                               <a href={{persona.instagram}} target="blank">
                                    <i class="fab fa-instagram-square"></i>
                                </a>
                            </div>
                            <div class="p-4">
-                               <a href="" target="blank">
+                               <a href={{persona.twitter}} target="blank">
                                    <i class="fab fa-twitter-square"></i>
                                </a>
                            </div>
@@ -36,7 +36,7 @@
                    </div>
                </div>
            </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
+           <!-- <div class="col-lg-3 teams" data-aos="fade-up"
            data-aos-anchor-placement="center-bottom">
                <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
                    <div class="card-body">
@@ -116,9 +116,9 @@
                        </div>
                    </div>
                </div>
-           </div>
+           </div> -->
        </div>
-       <div class="row mt-5">
+       <!-- <div class="row mt-5">
            <div class="col-lg-3 teams" data-aos="fade-up"
            data-aos-anchor-placement="center-bottom">
                <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
@@ -227,6 +227,6 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> -->
    </div>
 </section>
