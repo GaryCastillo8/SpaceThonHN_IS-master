@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body , html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em; /*separacion */
+    /* color: white; */
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}

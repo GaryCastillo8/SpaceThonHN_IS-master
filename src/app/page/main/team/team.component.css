@@ -1,0 +1,30 @@
+.section{
+    text-align: center; /*centrar el texto*/
+    padding: 50px 80px; /*50 px en la parte superiodo he inferior 80px en la laterales*/
+}
+
+.section-light{
+    background-color: #f4f4f4;
+}
+.section-dark{
+    background-color:#282e34;
+    color: #dddddd;
+}
+.bimg2{
+    /* position:relative; */
+    opacity: 0.90;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+.bimg2{
+    background-image: url('../../../../assets/90.png') ;
+    /* background-size: 100% 100%; */
+    min-height: 100%;
+}
