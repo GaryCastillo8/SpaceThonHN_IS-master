@@ -1,28 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark  bg-dark fixed-top">
-    <div class="container">
-        <nav class="navbar navbar-dark bg-darnavbar-dark">
-            <a class="navbar-brand" href="#">
-                <img class="logo" src="../../../../assets/logo1.png" alt=""> SpaceThonHN
-            </a>
-        </nav>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-dark bg-darnavbar-dark">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="../../../../assets/logo1.png" alt="" />
+        SpaceThonHN
+      </a>
+    </nav>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active" style="cursor: pointer;">
-                    <a class="nav-link" (click)="goToComponent('inicio')">Inicio </a>
-                </li>
-                <li class="nav-item active" style="cursor: pointer;">
-                    <a class="nav-link" (click)="goToComponent('equipo')">Equipo</a>
-                </li>
-                <li class="nav-item active" style="cursor: pointer;">
-                    <a class="nav-link" (click)="goToComponent('contactanos')">Contactanos</a>
-                </li>
-                <li class="nav-item active" style="cursor: pointer;">
-                    <a class="nav-link" [routerLink]="['/signup']" routerLinkActive="router-link-active">Iniciar sesion</a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" style="cursor: pointer">
+          <a class="nav-link" (click)="goToComponent('inicio')">Inicio </a>
+        </li>
+        <li class="nav-item active" style="cursor: pointer">
+          <a class="nav-link" (click)="goToComponent('equipo')">Equipo</a>
+        </li>
+        <li class="nav-item active" style="cursor: pointer">
+          <a class="nav-link" (click)="goToComponent('contactanos')"
+            >Contactanos</a
+          >
+        </li>
+        <li class="nav-item active" style="cursor: pointer">
+          <a
+            class="nav-link"
+            [routerLink]="['/signup']"
+            routerLinkActive="router-link-active"
+          >
+            Registrarse</a
+          >
+        </li>
+        <li class="nav-item active" style="cursor: pointer">
+          <a
+            class="nav-link"
+            [routerLink]="['/login']"
+            routerLinkActive="router-link-active"
+            >Iniciar sesion</a
+          >
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
