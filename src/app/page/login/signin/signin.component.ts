@@ -44,6 +44,9 @@ export class SignInComponent implements OnInit {
         this.router.navigate(['mediciones']);
       },
       (err) => {
+        if (err.error.message == 'Invalid credentials') {
+          alert('Correo o contraseña incorrectos');
+        }
         console.log(err);
       }
     );
