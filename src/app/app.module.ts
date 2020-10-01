@@ -14,6 +14,13 @@ import { ContactUsComponent } from './page/main/contact-us/contact-us.component'
 import { MainComponent } from './page/main/main/main.component';
 import { SignUpComponent } from './page/login/signup/signup.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { UserService } from './services/user.service';
+import { MedicionesComponent } from './page/portal/mediciones/mediciones.component';
+import { MedicionComponent } from './page/portal/medicion/medicion.component';
+import { QueryFormComponent } from './page/portal/query-form/query-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +33,18 @@ import { SignUpComponent } from './page/login/signup/signup.component';
     ContactUsComponent,
     MainComponent,
     SignUpComponent,
+    MedicionesComponent,
+    MedicionComponent,
+    QueryFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
