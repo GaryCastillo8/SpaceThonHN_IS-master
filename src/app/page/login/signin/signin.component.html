@@ -14,7 +14,7 @@
                     <span class="focus-input100"></span>
                 </div>
 
-                <span *ngIf="form.get('password').invalid && (form.dirty || form.touched)" class="text-danger">          
+                <span *ngIf="form.get('password').invalid && (form.dirty || form.touched)" class="text-danger">
                     Contraseña es obligatoria
                 </span>
                 <div class="wrap-input100 m-b-16">
@@ -22,13 +22,13 @@
                     <span class="focus-input100"></span>
                 </div>
 
-                <!-- <div class="flex-sb-m w-full p-t-3 p-b-24">
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
                     <div>
                         <a routerLink="/signup" class="txt1">
                             ¿No tienes cuenta?
                         </a>
                     </div>
-                </div> -->
+                </div>
 
                 <button class="container-login100-form-btn m-t-17 login100-form-btn" [disabled]="form.invalid" type="submit">
                     Ingresar
