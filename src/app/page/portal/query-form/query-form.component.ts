@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueryFormComponent implements OnInit {
   categories: string[] = [
-    'temperature',
-    'pressure',
-    'river',
-    'precipitation',
-    'flow',
+    '--Select variable--',
+    'Temperature',
+    'Pressure',
+    'River',
+    'Precipitation',
+    'Flow',
   ];
 
   constructor() {}
