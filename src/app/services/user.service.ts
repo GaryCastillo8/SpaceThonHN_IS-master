@@ -17,5 +17,7 @@ export class UserService {
     return this.http.post(`${BASE_URL}/api/login`, user, HTTP_OPTIONS);
   }
 
-  register(user: any) {}
+  register(user: any): Observable<any> {
+    return this.http.post(`${BASE_URL}/api/register`, user, HTTP_OPTIONS);
+  }
 }
