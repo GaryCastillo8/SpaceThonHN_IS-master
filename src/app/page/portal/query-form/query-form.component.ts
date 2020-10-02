@@ -48,7 +48,15 @@ export class QueryFormComponent implements OnInit {
     console.log(this.readingType);
     this.dataService.getData(this.readingType).subscribe(
       (response) => {
-        this.newQuery.emit(response);
+        this.newQuery.emit({
+          type: this.readingType,
+          data: response.data.map((item) => {
+            return {
+              date: item.date,
+              value: item[this.readingType] / 100,
+            };
+          }),
+        });
       },
       (err) => {
         console.log(err);

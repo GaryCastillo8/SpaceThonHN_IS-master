@@ -9,8 +9,14 @@ export class MedicionComponent implements OnInit {
   @Input() type: string;
   @Input() date: string;
   @Input() value: any;
+  @Input() units: any;
+
+  formatedDate: string;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let d = new Date(this.date);
+    this.formatedDate = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+  }
 }

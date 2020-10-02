@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   isLogged: boolean = false;
   user: any;
+  navFixed: string;
 
   constructor(
     private viewportScroller: ViewportScroller,
@@ -27,6 +28,8 @@ export class NavbarComponent implements OnInit {
 
       this.user = JSON.parse(localStorage.getItem('user'));
     }
+
+    this.navFixed = this.router.url == '/main' ? 'fixed-top' : '';
   }
 
   private onLogout(): void {
