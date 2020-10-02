@@ -34,6 +34,7 @@ export class NavbarComponent implements OnInit {
 
   private onLogout(): void {
     localStorage.clear();
+    this.isLogged = false;
     this.router.navigate(['main']);
   }
 }

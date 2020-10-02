@@ -44,29 +44,73 @@ export class QueryFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(e: any) {
-    console.log(this.readingType);
-    this.dataService.getData(this.readingType).subscribe(
-      (response) => {
-        this.newQuery.emit({
-          type: this.readingType,
-          data: response.data.map((item) => {
-            return {
-              date: item.date,
-              value: item[this.readingType] / 100,
-            };
-          }),
-        });
-      },
-      (err) => {
-        console.log(err);
+  onSubmit(e: any): void {
+    if (this.readingType == null) {
+      alert('Tiene que seleccionar un tipo de medición para consultar.');
+      return;
+    }
+    if (this.firstDate != null && this.lastDate != null) {
+      let tmpFirst: any = new Date(this.firstDate);
+      let tmpLast: any = new Date(this.lastDate);
+
+      let formatedDate: string = this.formatDate(tmpFirst, tmpLast);
+
+      this.dataService.getDataByDate(this.readingType, formatedDate).subscribe(
+        (response) => {
+          this.newQuery.emit({
+            type: this.readingType,
+            data: response.data.map((item) => {
+              return {
+                date: item.date,
+                value: item[this.readingType] / 1000,
+              };
+            }),
+          });
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    } else {
+      if (this.firstDate != null || this.lastDate != null) {
+        alert(
+          'Tiene que introducir las 2 fechas para poder hacer las consultas filtradas por fechas. Se hara la consulta sin el filtro.'
+        );
       }
-    );
+
+      this.dataService.getData(this.readingType).subscribe(
+        (response) => {
+          this.newQuery.emit({
+            type: this.readingType,
+            data: response.data.map((item) => {
+              return {
+                date: item.date,
+                value: item[this.readingType] / 1000,
+              };
+            }),
+          });
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    }
   }
 
   onReset() {
     this.firstDate = null;
     this.lastDate = null;
     this.readingType = null;
+  }
+
+  private formatDate(d1: any, d2: any) {
+    let tmpD1: string = `${d1.getFullYear()}.${
+      d1.getMonth() + 1
+    }.${d1.getDate()}`;
+    let tmpD2: string = `${d2.getFullYear()}.${
+      d2.getMonth() + 1
+    }.${d2.getDate()}`;
+
+    return `${tmpD1}-${tmpD2}`;
   }
 }

@@ -21,7 +21,7 @@ export class MedicionesComponent implements OnInit {
 
   private getControlUnits(type: string) {
     switch (type) {
-      case 'tmeperature':
+      case 'temperature':
         this.controlUnits.name = 'Temperatura';
         this.controlUnits.units = 'ºC';
         break;
