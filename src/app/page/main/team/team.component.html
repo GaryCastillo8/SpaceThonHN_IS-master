@@ -1,236 +1,82 @@
 <section class="section section-dark">
-    <h2>Equipo de trabajo</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, doloremque. Aliquid eum explicabo, quibusdam sed ducimus doloribus, optio exercitationem repellat odit minus animi debitis tempore doloremque aperiam perferendis. Est ea ab dolores officiis ipsa rem illo, unde sapiente maxime ad natus eius culpa, cumque velit assumenda temporibus inventore! A non repellat totam? Aperiam in nobis aliquid omnis ratione ad beatae consequatur delectus dolore. Excepturi rem, ipsum facere ratione, molestiae deleniti sint impedit quasi dolorum nesciunt commodi eligendi expedita voluptates. Molestiae odio recusandae, in et id error unde deleniti ipsum harum cupiditate?</p>
+  <h2>Equipo de trabajo</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+    doloremque. Aliquid eum explicabo, quibusdam sed ducimus doloribus, optio
+    exercitationem repellat odit minus animi debitis tempore doloremque aperiam
+    perferendis. Est ea ab dolores officiis ipsa rem illo, unde sapiente maxime
+    ad natus eius culpa, cumque velit assumenda temporibus inventore! A non
+    repellat totam? Aperiam in nobis aliquid omnis ratione ad beatae consequatur
+    delectus dolore. Excepturi rem, ipsum facere ratione, molestiae deleniti
+    sint impedit quasi dolorum nesciunt commodi eligendi expedita voluptates.
+    Molestiae odio recusandae, in et id error unde deleniti ipsum harum
+    cupiditate?
+  </p>
 </section>
-
 
 <section class="bimg2 text-center pt-5" id="equipo">
-    <div class="container p-4 ">
-        <h1 class="text-black">SpaceThonHN equipo rojo</h1>
-        <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, explicabo.</p>
-        <div class="row">
-           <div *ngFor ="let persona of estudiantes" class="col-lg-3 teams "  data-aos="fade-up"
-                                        data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark mb-5" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/{{persona.img}}" class="img-fluid rounded-circle" alt="Person One" style="width: 190px; height: 220px;">
-                       <h3 class="mt-3">{{persona.name}}</h3>
-                       <p>{{persona.descrip}}</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href={{persona.facebook}} target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href={{persona.instagram}} target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href={{persona.twitter}} target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <!-- <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/hombre.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">MISAEL LANDERO</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/mujer.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">DIANA ROSALES</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/hombre1.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">WUILMER GARCIA</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div> -->
-       </div>
-       <!-- <div class="row mt-5">
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/UnahMenos.png" class="img-fluid rounded" alt="Person One">
-                       <h3 class="mt-3">JEANLUC BOQUIN</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/mujer.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">ANA THOMPSON</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/hombre1.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">OSCAR GARCIA</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 teams" data-aos="fade-up"
-           data-aos-anchor-placement="center-bottom">
-               <div class="card text-dark" style="background: rgba(64, 115, 158, .35);">
-                   <div class="card-body">
-                       <img src="../../../../assets/mujer1.png" class="img-fluid rounded-circle" alt="Person One">
-                       <h3 class="mt-3">DESCONOCIDO</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora dolorum eveniet. Facilis incidunt quia a eveniet rerum, reprehenderit ad asperiores excepturi. Illum, tempore eos. Recusandae libero saepe consequuntur nobis.</p>
-                       <div class="d-flex flex-row justify-content-center">
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-facebook"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-instagram-square"></i>
-                               </a>
-                           </div>
-                           <div class="p-4">
-                               <a href="" target="blank">
-                                   <i class="fab fa-twitter-square"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div> -->
-   </div>
+  <div class="container p-4">
+    <h1 class="text-black">SpaceThonHN equipo rojo</h1>
+    <p style="color: black">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima,
+      explicabo.
+    </p>
+    <div class="row">
+      <div
+        *ngFor="let persona of estudiantes"
+        class="col-lg-3 teams"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <div
+          class="card text-dark mb-5"
+          style="background: rgba(64, 115, 158, 0.35)"
+        >
+          <div class="card-body">
+            <div class="circle img-fluid">
+              <img
+                src="../../../../assets/{{ persona.img }}"
+                alt="Person One"
+                style="width: 190px; height: 220px"
+              />
+            </div>
+            <h3 class="mt-3">{{ persona.name }}</h3>
+            <p>{{ persona.descrip }}</p>
+            <div class="d-flex flex-row justify-content-center">
+              <div class="p-4">
+                <a href="{{ persona.facebook }}" target="blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="{{ persona.instagram }}" target="blank">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="{{ persona.twitter }}" target="blank">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section section-dark">
-    <h2>Equipo de trabajo</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, doloremque. Aliquid eum explicabo, quibusdam sed ducimus doloribus, optio exercitationem repellat odit minus animi debitis tempore doloremque aperiam perferendis. Est ea ab dolores officiis ipsa rem illo, unde sapiente maxime ad natus eius culpa, cumque velit assumenda temporibus inventore! A non repellat totam? Aperiam in nobis aliquid omnis ratione ad beatae consequatur delectus dolore. Excepturi rem, ipsum facere ratione, molestiae deleniti sint impedit quasi dolorum nesciunt commodi eligendi expedita voluptates. Molestiae odio recusandae, in et id error unde deleniti ipsum harum cupiditate?</p>
+  <h2>Equipo de trabajo</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+    doloremque. Aliquid eum explicabo, quibusdam sed ducimus doloribus, optio
+    exercitationem repellat odit minus animi debitis tempore doloremque aperiam
+    perferendis. Est ea ab dolores officiis ipsa rem illo, unde sapiente maxime
+    ad natus eius culpa, cumque velit assumenda temporibus inventore! A non
+    repellat totam? Aperiam in nobis aliquid omnis ratione ad beatae consequatur
+    delectus dolore. Excepturi rem, ipsum facere ratione, molestiae deleniti
+    sint impedit quasi dolorum nesciunt commodi eligendi expedita voluptates.
+    Molestiae odio recusandae, in et id error unde deleniti ipsum harum
+    cupiditate?
+  </p>
 </section>

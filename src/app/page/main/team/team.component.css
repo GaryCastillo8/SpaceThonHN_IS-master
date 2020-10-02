@@ -1,30 +1,38 @@
-.section{
-    text-align: center; /*centrar el texto*/
-    padding: 50px 80px; /*50 px en la parte superiodo he inferior 80px en la laterales*/
+.section {
+  text-align: center; /*centrar el texto*/
+  padding: 50px 80px; /*50 px en la parte superiodo he inferior 80px en la laterales*/
 }
 
-.section-light{
-    background-color: #f4f4f4;
+.section-light {
+  background-color: #f4f4f4;
 }
-.section-dark{
-    background-color:#282e34;
-    color: #dddddd;
+.section-dark {
+  background-color: #282e34;
+  color: #dddddd;
 }
-.bimg2{
-    /* position:relative; */
-    opacity: 0.95;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;    
+.bimg2 {
+  /* position:relative; */
+  opacity: 0.95;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    text-align: center;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
 }
-.bimg2{
-    background-image: url('../../../../assets/90.png') ;
-    /* background-size: 100% 100%; */
-    min-height: 100%;
+.bimg2 {
+  background-image: url("../../../../assets/90.png");
+  /* background-size: 100% 100%; */
+  min-height: 100%;
+}
+.circle {
+  border-radius: 50%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
