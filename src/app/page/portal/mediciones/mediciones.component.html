@@ -5,6 +5,15 @@
 </div>
 
 <div class="container mt-4">
+  <div class="row mb-2">
+    <button
+      *ngIf="data.length > 0"
+      (click)="onDownload()"
+      class="btn btn-block btn-light"
+    >
+      Descargar
+    </button>
+  </div>
   <div class="row">
     <div *ngFor="let medicion of data" class="col-4">
       <app-medicion

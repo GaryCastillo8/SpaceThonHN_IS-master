@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-mediciones',
@@ -6,17 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mediciones.component.css'],
 })
 export class MedicionesComponent implements OnInit {
-  data: any[];
+  data: any[] = [];
   controlUnits: any = {};
+  dateFormat: any;
+  type: any;
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {}
 
   onNewQuery(e) {
     this.data = e.data;
+    this.type = e.type;
+    this.dateFormat = e.date ? e.date : false;
     this.getControlUnits(e.type);
     console.log(e);
+  }
+
+  onDownload() {
+    let file: any = new Blob([JSON.stringify(this.data)], {
+      type: 'application/json',
+    });
+    saveAs(file, 'data.json');
   }
 
   private getControlUnits(type: string) {

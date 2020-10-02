@@ -13,6 +13,8 @@ export class QueryFormComponent implements OnInit {
   firstDate: any = null;
   lastDate: any = null;
 
+  isWaiting: boolean = false;
+
   categories: any[] = [
     {
       name: 'Seleccionar medición',
@@ -45,7 +47,9 @@ export class QueryFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(e: any): void {
+    this.isWaiting = true;
     if (this.readingType == null) {
+      this.isWaiting = false;
       alert('Tiene que seleccionar un tipo de medición para consultar.');
       return;
     }
@@ -57,8 +61,10 @@ export class QueryFormComponent implements OnInit {
 
       this.dataService.getDataByDate(this.readingType, formatedDate).subscribe(
         (response) => {
+          this.isWaiting = false;
           this.newQuery.emit({
             type: this.readingType,
+            date: formatedDate,
             data: response.data.map((item) => {
               return {
                 date: item.date,
@@ -80,6 +86,7 @@ export class QueryFormComponent implements OnInit {
 
       this.dataService.getData(this.readingType).subscribe(
         (response) => {
+          this.isWaiting = false;
           this.newQuery.emit({
             type: this.readingType,
             data: response.data.map((item) => {

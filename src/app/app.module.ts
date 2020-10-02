@@ -20,7 +20,6 @@ import { UserService } from './services/user.service';
 import { MedicionesComponent } from './page/portal/mediciones/mediciones.component';
 import { MedicionComponent } from './page/portal/medicion/medicion.component';
 import { QueryFormComponent } from './page/portal/query-form/query-form.component';
-import { SateliteComponent } from './page/satelite/satelite.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { SateliteComponent } from './page/satelite/satelite.component';
     MedicionesComponent,
     MedicionComponent,
     QueryFormComponent,
-    SateliteComponent,
   ],
   imports: [
     BrowserModule,
