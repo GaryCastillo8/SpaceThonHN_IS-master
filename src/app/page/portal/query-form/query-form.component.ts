@@ -68,7 +68,7 @@ export class QueryFormComponent implements OnInit {
             data: response.data.map((item) => {
               return {
                 date: item.date,
-                value: item[this.readingType] / 1000,
+                value: item[this.readingType],
               };
             }),
           });
@@ -92,7 +92,7 @@ export class QueryFormComponent implements OnInit {
             data: response.data.map((item) => {
               return {
                 date: item.date,
-                value: item[this.readingType] / 1000,
+                value: item[this.readingType],
               };
             }),
           });

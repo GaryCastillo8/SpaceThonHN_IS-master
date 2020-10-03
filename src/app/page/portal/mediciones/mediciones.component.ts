@@ -41,7 +41,7 @@ export class MedicionesComponent implements OnInit {
 
       case 'pressure':
         this.controlUnits.name = 'Presión';
-        this.controlUnits.units = 'Pa';
+        this.controlUnits.units = 'hPa';
         break;
 
       case 'river':
