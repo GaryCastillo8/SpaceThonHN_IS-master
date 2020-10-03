@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 const BASE_URL: string =
-  'http://ec2-18-191-248-162.us-east-2.compute.amazonaws.com:5000';
+  'http://ec2-18-191-248-162.us-east-2.compute.amazonaws.com';
 // const BASE_URL: string = 'http://localhost:5000';
 @Injectable({
   providedIn: 'root',
